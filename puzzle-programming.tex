@@ -77,10 +77,162 @@
   \center{\pgfuseimage{gdp}}
 \end{frame}
 
+\begin{frame}{\textbf{Type} Driven Design}
+  \quote{-}{-}{
+    When writing code in a statically typed language sometimes types are
+    considered as orthogonal to the logic of the code. We write them to
+    appease the compiler, or get performance or IntelliSense \& navigation, but
+    all of these has no relation to the code itself.
+
+    This is wrong.
+  }
+  \pause
+  In a nutshell:
+  \begin{enumerate}[<+->]
+    \item define types for entities in problem domain
+    \item encode restrictions in type
+    \item split the problem into subcomponents, based on types
+    \item divide et impera
+  \end{enumerate}
+\end{frame}
+
+\begin{frame}{Programming Languages from the POV of Types}
+  \begin{itemize}
+    \item typed: C, Haskell, Python, Ruby
+    \item untyped: assembly, SKI, Brainf**k
+    \pause
+    \item weakly typed: Python, Ruby
+    \item strongly typed: C, Java, Haskell
+    \pause
+    \item weak typing: JavaScript, C
+    \item strong typing: Haskell
+    \pause
+    \item \textbf{type-safe}: all of the good parts of the above: Haskell, VHDL
+    \pause
+    \item manifestly typed: C, Java
+    \item type inference: Haskell
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{What's in a Type?}
+  \begin{itemize}[<+->]
+    \item \textbf{syntactic} label associated with variable
+    \item \textbf{value space} \textit{set} of values with \textit{same}
+    properties
+    \vskip1cm
+    \item maximal set of values.
+    \vskip1cm
+    \item proper types: \texttt{Bool}, \texttt{Int}, \texttt{Integer}
+    \item type variables: \texttt{a}, \texttt{t0}, \texttt{my\_type}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Some Types}
+  TODO: a, [a], a->b
+\end{frame}
+
+\begin{frame}{What's the Type of \texttt{+}?}
+  TODO
+\end{frame}
+
+\begin{frame}{Idea}
+  \quote{Isaac Asimov}{-}{
+    The most exciting phrase to hear in science, the one that heralds the most
+    discoveries, is not "Eureka!", but "That's funny..."
+  }
+  \pause
+  \pause
+  \begin{description}[<+->]
+    \item[(jigsaw) puzzle] mix pieces based on boundaries
+    \item[programming...] mix functions based on types
+  \end{description}
+\end{frame}
+
+\begin{frame}{Tools}
+  \begin{itemize}[<+->]
+    \item \texttt{ghci} - GHC interpreter
+    \item \texttt{Hoogle} / \texttt{Hayoo} - search engines
+    \item no \texttt{Hing} for now
+  \end{itemize}
+  \pause
+  Let's play
+\end{frame}
+
+\begin{frame}{Case Study 1}
+  TODO: map example
+\end{frame}
+
+\begin{frame}{Case Study 2}
+  TODO: graph example
+\end{frame}
+
+\begin{frame}{Magic}
+  \quote{-}{-}{Every methodology I've come across has, at its kernel, a very
+  small section labelled do ``magic here''.}
+  \pause
+  \quote{Arthur C. Clarke}{-}{Any sufficiently advanced technology is
+  indistinguishable from magic.}
+\end{frame}
+
+\begin{frame}{Case Study 3}
+  TODO: Line Break Algorithm
+\end{frame}
+
+\begin{frame}{Case Study 4}
+  TODO: Parsers
+\end{frame}
+
+\begin{frame}{At The End of The Day}
+  \begin{itemize}
+    \item powerful paradigm
+    \item several guarantees
+    \begin{itemize}
+      \item safety
+      \item proofs
+      \item compiler alliance
+    \end{itemize}
+  \end{itemize}
+  \pause
+  \quote{-}{-}{A mind once stretched by a new idea never regains its original
+  dimensions.}
+\end{frame}
+
+\begin{frame}{The Other Side of The Coin}
+  \begin{itemize}
+    \item must take care to design proper types
+  \end{itemize}
+  \pause
+  \quote{Henry Ward Beecher}{-}{It's easier to go down a hill than up it but
+  the view is much better at the top.}
+\end{frame}
+
+\begin{frame}{Food for Thought}
+  \quote{Edith Ann}{-}{I like a teacher who gives you something to take home
+  to think about besides homework.}
+  \pause
+  Compare your own paradigm's results in one of the previous case studies.
+\end{frame}
+
 \section{Extra slides}
 \frame{\tableofcontents[currentsection]}
 
-\begin{frame}{TODO}
+\begin{frame}{Applicability}
+  \begin{itemize}[<+->]
+    \item not only in Haskell
+    \item not only in strongly typed languages (but with some problems)
+    \item adabtability to language constraints
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Puzzle Driven Development}
+  \begin{itemize}[<+->]
+    \item already patended :(
+    \item 2010
+    \item something else: integration branches
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Dependent Types}
   TODO
 \end{frame}
 
