@@ -4,4 +4,8 @@ Puzzle-programming
 A short presentation on a new type of programming. Talk to be held at event
 named "Talsk #11 by Softbinator".
 
-More details to come after the talk.
+Basically it presents development in Haskell via matching types and type
+decomposition.
+
+Content of slides is also a test for the content to be included in the
+upcoming TMR #22.
