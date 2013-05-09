@@ -12,13 +12,69 @@
 
 \setbeamertemplate{frametitle continuation}[from second]
 \setbeamertemplate{footline}[frame number]
+\setbeamercolor{postit}{fg=black,bg=example text.fg!75!black!10!bg}
+
+\renewcommand\quote[3]{
+  \begin{beamercolorbox}[wd=\textwidth,rounded=true,shadow=true]{postit}
+    #3
+    \vskip5mm
+    \hspace*\fill{\small{#1, \textit{#2}}}
+  \end{beamercolorbox}
+}
+
+\pgfdeclareimage[height=3cm]{waterfall}{img/waterfall}
+\pgfdeclareimage[height=5cm]{gdp}{img/gdp}
 
 \begin{document}
 
 \maketitle
 
-\begin{frame}{TODO}
-  TODO
+\begin{frame}{A Small Problem}
+  \quote{Rick Cook}{The Wizardry Compiled}{
+    Programming today is a race between software engineers striving to build
+    bigger and better idiot-proof programs, and the Universe trying to produce
+    bigger and better idiots. So far, the Universe is winning.
+  }
+\end{frame}
+
+\begin{frame}{One Solution}
+  \quote{Murray Cantor}{-}{
+    Software development may seem to have a lot in common with construction or
+    engineering projects, such as building a bridge.
+  }
+  \pause
+  \center{\pgfuseimage{waterfall}}
+\end{frame}
+
+\begin{frame}{An Extreme Solution}
+  \quote{-}{Manifesto for Agile Software Development}{
+    Individuals and interactions over processes and tools
+    Working software over comprehensive documentation
+    Customer collaboration over contract negotiation
+    Responding to change over following a plan
+  }
+  \pause
+  \quote{Anonymous}{-}{First do it, then do it right, then do it fast.}
+\end{frame}
+
+\begin{frame}{Test Driven-...}
+  \begin{itemize}
+    \item Development
+    \item Design
+    \item $\ldots$
+  \end{itemize}
+  \pause
+  \begin{itemize}
+    \item tests
+    \item contracts
+    \item asserts
+  \end{itemize}
+  \pause
+  Defensive programming
+\end{frame}
+
+\begin{frame}{Guerilla Defensive Programming}
+  \center{\pgfuseimage{gdp}}
 \end{frame}
 
 \section{Extra slides}
