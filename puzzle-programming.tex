@@ -2,7 +2,7 @@
 
 \usepackage{color}			 % highlight
 \usepackage{alltt}			 % highlight
-%\usepackage{code/highlight}	 % highlight
+\usepackage{code/highlight}	 % highlight
 
 \usepackage{hyperref}
 \mode<presentation>
@@ -11,7 +11,7 @@
 \author{Mihai Maruseac, ROSEdu\\mihai@rosedu.org}
 
 \setbeamertemplate{frametitle continuation}[from second]
-\setbeamertemplate{footline}[frame number]
+%\setbeamertemplate{footline}[frame number]
 \setbeamercolor{postit}{fg=black,bg=example text.fg!75!black!10!bg}
 
 \renewcommand\quote[3]{
@@ -128,11 +128,90 @@
 \end{frame}
 
 \begin{frame}{Some Types}
-  TODO: a, [a], a->b
+  \begin{description}[<+->]
+    \item[\texttt{Int}] register sized integer
+    \item[\texttt{Integer}] unlimited size integer
+    \item[\texttt{a}] anything (type variable)
+    \item[\texttt{[Int]}] list of register sized integers
+    \item[\texttt{[a]}] list of anything (but same type: list of integers, list
+    of pairs, $\ldots$)
+    \item[\texttt{a $\rightarrow$ b}] function from values of type \texttt{a}
+    to values of type \texttt{b}
+    \item[\texttt{a $\rightarrow$ b $\rightarrow$ c}]
+    \item[\texttt{a $\rightarrow$ (b $\rightarrow$ c)}]
+    \item[\texttt{(a $\rightarrow$ b) $\rightarrow$ c}]
+  \end{description}
 \end{frame}
 
 \begin{frame}{What's the Type of \texttt{+}?}
-  TODO
+  \input{code/plus1.hs}
+\end{frame}
+
+\begin{frame}{What's the Type of \texttt{+}?}
+  \input{code/plus2.hs}
+\end{frame}
+
+\begin{frame}{What's the Type of \texttt{+}?}
+  \input{code/plus3.hs}
+\end{frame}
+
+\begin{frame}{What's the Type of \texttt{+}?}
+  \input{code/plus4.hs}
+\end{frame}
+
+\begin{frame}{What's the Type of \texttt{+}?}
+  \input{code/plus5.hs}
+\end{frame}
+
+\begin{frame}{What's the Type of \texttt{+}?}
+  \input{code/plus6.hs}
+\end{frame}
+
+\begin{frame}{Which Function has Type \texttt{a $\rightarrow$ a}?}
+  \input{code/id1.hs}
+\end{frame}
+
+\begin{frame}{Which Function has Type \texttt{a $\rightarrow$ a}?}
+  \input{code/id2.hs}
+\end{frame}
+
+\begin{frame}{Which Function has Type \texttt{a $\rightarrow$ a}?}
+  \input{code/id3.hs}
+\end{frame}
+
+\begin{frame}{Which Function has Type \texttt{(a, b) $\rightarrow$ a}?}
+  \pause
+  \input{code/fst.hs}
+\end{frame}
+
+\begin{frame}{Which Functions have Type \texttt{Num a => (a, a) $\rightarrow$ a}?}
+  \pause
+  \input{code/pair.hs}
+  \pause
+
+  \input{code/pair1.hs}
+\end{frame}
+
+\begin{frame}{How About Side Effects?}
+  \input{code/io1.hs}
+\end{frame}
+
+\begin{frame}{How About Side Effects?}
+  \input{code/io2.hs}
+\end{frame}
+
+\begin{frame}{How About Side Effects?}
+  \small
+  \input{code/io3.hs}
+\end{frame}
+
+\begin{frame}{Types In a Nutshell}
+  \begin{itemize}
+    \item seatbelt
+    \item safety net
+    \item documentation
+    \item no mistakenly launching missiles
+  \end{itemize}
 \end{frame}
 
 \begin{frame}{Idea}
@@ -159,11 +238,76 @@
 \end{frame}
 
 \begin{frame}{Case Study 1}
-  TODO: map example
+  \begin{itemize}
+    \item Apply same function over a list of arguments
+  \end{itemize}
+  \input{code/map1.hs}
+\end{frame}
+
+\begin{frame}{Case Study 1}
+  \begin{itemize}
+    \item Apply same function over a list of arguments
+    \item Rename types and look for missing links
+  \end{itemize}
+  \input{code/map2.hs}
+\end{frame}
+
+\begin{frame}{Case Study 1}
+  \begin{itemize}
+    \item Apply same function over a list of arguments
+  \end{itemize}
+  \input{code/map3.hs}
+\end{frame}
+
+\begin{frame}{Case Study 1}
+  \begin{itemize}
+    \item Apply same function over a list of arguments
+  \end{itemize}
+  \input{code/map4.hs}
+\end{frame}
+
+\begin{frame}{Case Study 1}
+  \begin{itemize}
+    \item Apply same function over \textit{nodes in a tree}
+  \end{itemize}
+  \input{code/map5.hs}
+\end{frame}
+
+\begin{frame}{Case Study 1}
+  \begin{itemize}
+    \item Apply same function over \textit{nodes in a tree}
+  \end{itemize}
+  \input{code/map6.hs}
+\end{frame}
+
+\begin{frame}{Case Study 1}
+  \begin{itemize}
+    \item Apply same function over \textit{nodes in a tree}
+  \end{itemize}
+  \tiny
+  \input{code/map7.hs}
+\end{frame}
+
+\begin{frame}{Case Study 1}
+  \begin{itemize}
+    \item Apply same function over \textit{nodes in a tree}
+  \end{itemize}
+  \tiny
+  \input{code/map8.hs}
 \end{frame}
 
 \begin{frame}{Case Study 2}
-  TODO: graph example
+  \begin{itemize}
+    \item Convert between graph representations given the following functions
+  \end{itemize}
+  \input{code/graph1.hs}
+\end{frame}
+
+\begin{frame}{Case Study 2}
+  \begin{itemize}
+    \item Convert between graph representations given the following functions
+  \end{itemize}
+  \input{code/graph2.hs}
 \end{frame}
 
 \begin{frame}{Magic}
@@ -175,11 +319,24 @@
 \end{frame}
 
 \begin{frame}{Case Study 3}
-  TODO: Line Break Algorithm
+  \begin{itemize}[<+->]
+    \item Break a text in newlines to create a justified paragraph.
+    \item Initial type \texttt{String -> String}
+    \item Second try\\ \small{\texttt{String -> [String] -> [[String]] ->
+    [String] -> String}}
+    \item Strange Loop 2012, Michael Feathers
+  \end{itemize}
 \end{frame}
 
 \begin{frame}{Case Study 4}
-  TODO: Parsers
+  \begin{itemize}
+    \item create a regexp parser
+  \end{itemize}
+  \pause
+  \begin{itemize}
+    \item this and above with more details in TMR 22
+    \item \url{http://themonadreader.wordpress.com/}
+  \end{itemize}
 \end{frame}
 
 \begin{frame}{At The End of The Day}
@@ -206,13 +363,6 @@
   the view is much better at the top.}
 \end{frame}
 
-\begin{frame}{Food for Thought}
-  \quote{Edith Ann}{-}{I like a teacher who gives you something to take home
-  to think about besides homework.}
-  \pause
-  Compare your own paradigm's results in one of the previous case studies.
-\end{frame}
-
 \begin{frame}{Applicability}
   \begin{itemize}[<+->]
     \item not only in Haskell
@@ -230,7 +380,7 @@
 \end{frame}
 
 \begin{frame}{Dependent Types}
-  TODO
+  \input{code/idris.hs}
 \end{frame}
 
 \begin{frame}{Future}
