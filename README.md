@@ -9,3 +9,5 @@ decomposition.
 
 Content of slides is also a test for the content to be included in the
 upcoming TMR #22.
+
+Part of the slides will be presented in an upcoming workshop on Haskell.
